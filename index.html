@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aich</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: lato;
+			background: #C1E1EC;
+		}
+
+		.main1 {
+			margin: 2% 25%;
+		}
+
+		.main1 span {
+			font-size: 30px;
+		}
+
+		.main1 .content {
+			height: auto;
+			width: 40%;
+			background: #fff;
+			display: grid;
+			color: black;
+			font-size: 30px;
+			border-bottom-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+
+		.content span {
+			font-size: 25px;
+		}
+
+		.content form {
+			margin: 10% 10%;
+		}
+
+		.content p {
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.user_name,
+		.lover_name {
+			height: 35px;
+			width: 100%;
+			background: #EBF5FF;
+			border: 0px;
+			font-size: 18px;
+			margin-top: 10px;
+		}
+
+		.check {
+			height: 50px;
+			width: 95%;
+			text-align: center;
+			background: green;
+			margin-top: 20px;
+			font-size: 20px;
+			margin-bottom: 30px;
+			border: 0px;
+		}
+
+		@media (max-width: 400px) {
+			.main1 {
+				margin: 2% 20%;
+			}
+
+			.user_name,
+			.lover_name {
+				height: 30px;
+				width: 80%;
+			}
+		}
+
+		@media (max-width: 600px) {
+
+			.main1 {
+				margin: 15px 25px;
+			}
+
+			.user_name,
+			.lover_name {
+				height: 30px;
+				width: 80%;
+			}
+		}
+
+		@media (max-width: 800px) {
+			.main1 .content {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: 900px) {
+			.main1 .content {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: 1200px) {
+			.main1 .content {
+				width: 80%;
+			}
+		}
+
+		@media (max-width: 1500px) {
+			.main1 .content {
+				width: 50%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main1">
+		<span>Check your love percentage</span>
+		<div class="content">
+			<form onsubmit="return lovecheck()">
+				<table>
+					<tr>
+						<td>
+							<span>Your Name</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="name" class="user_name" id="uname" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>Lover Name</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="name" class="lover_name" id="pname" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p id="result"></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p id="ohoh"></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="submit" name="name" onclick="lovecheck" class="check" value="Test Love">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript">
+	function lovecheck() {
+		var x = document.getElementById("uname").value;
+		var y = document.getElementById("pname").value;
+		var rand = Math.ceil(Math.random() * 100);
+		document.getElementById("result").innerHTML = rand + "%";
+		document.getElementById("ohoh").innerHTML = " congratulation 🥳";
+		return false;
+	}
+</script>
